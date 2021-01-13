@@ -1,0 +1,140 @@
+syntax = "proto3";
+
+enum Difficulty {
+  EASY = 0;
+  MEDIUM = 1;
+  HARD = 2;
+}
+
+enum Category {
+  PERSON = 0;
+  PLACE = 1;
+  STORY = 2;
+  THING = 3;
+}
+
+enum Subcategory {
+  // Person categories
+  ACTOR = 0;
+  ARTIST = 1;
+  ATHLETE = 2;
+  CELEBRITY = 3;
+  FAMOUS_PERSON = 4;
+  FICTIONAL_PERSON = 5;
+  HISTORICAL_PERSON = 6;
+  LEADER = 7;
+  MASCOT = 8;
+  MUSICIAN = 9;
+  // Place categories
+  BRANDED_ESTABLISHMENT = 10;
+  CITY = 11;
+  COUNTRY = 12;
+  CULTURAL_PLACE = 13;
+  FICTIONAL_PLACE = 14;
+  NATURE = 15;
+  STATE = 16;
+  BODY_OF_WATER = 17;
+  // Story categories
+  ANIMATION = 18;
+  BOOK = 19;
+  BOOK_AND_MOVIE = 20;
+  COMIC = 21;
+  MOVIE = 22;
+  MUSICAL = 23;
+  MYTH = 24;
+  PLAY = 25;
+  TV = 26;
+  // Thing categories
+  ANIMAL = 27;
+  EDIBLE = 28;
+  GAME = 29;
+  TOY = 30;
+  WEBSITE = 31;
+}
+
+message Entry {
+  string word = 1;  // REQUIRED
+  repeated string alternate_spellings = 2;
+  Difficulty difficulty = 3;  // REQUIRED
+  Category category = 4;  // REQUIRED
+  Subcategory subcategory = 5;
+  bool us_specific = 6;
+  // Traits; fill in as many or as few as you would like.
+  // 
+  // Attributes.
+  // Each "complex" attribute is like the previous one but more exciting or something.
+  repeated string sizes = 7;
+  repeated string complex_sizes = 8;
+  repeated string colors = 9;
+  repeated string complex_colors = 10;
+  repeated string tastes = 11;
+  repeated string complex_tastes = 12;
+  repeated string textures = 13;
+  repeated string complex_textures = 14;
+  repeated string ideas = 15;
+  repeated string complex_ideas = 16;
+  repeated string tools = 17;
+  repeated string complex_tools = 18;
+  repeated string positive_attributes = 19;
+  repeated string complex_positive_attributes = 20;
+  repeated string positive_emotional_attributes = 21;
+  repeated string complex_positive_emotional_attributes = 22;
+  repeated string negative_attributes = 23;
+  repeated string complex_negative_attributes = 24;
+  repeated string negative_emotional_attributes = 25;
+  repeated string complex_negative_emotional_attributes = 26;
+  repeated string ages = 27;
+  repeated string complex_ages = 28;
+  repeated string body_attributes = 29;
+  repeated string complex_body_attributes = 30;
+  repeated string shapes = 31;
+  repeated string complex_shapes = 32;
+  repeated string related_events = 33;
+  repeated string complex_related_events = 34;
+  repeated string materials = 35;
+  repeated string complex_materials = 36;
+  repeated string buildings = 37;
+  repeated string complex_buildings = 38;
+  repeated string creatures = 39;
+  repeated string complex_creatures = 40;
+  repeated string places = 41;
+  repeated string complex_places = 42;
+  repeated string person_attributes = 43;
+  repeated string complex_person_attributes = 44;
+  repeated string problems = 45;
+  repeated string complex_problems = 46;
+  // General world dumps.
+  repeated string general_adjectives = 48;
+  repeated string general_nouns = 49;
+  repeated string general_verbs = 50;
+  repeated string general_story_ending_verbs = 51;
+  repeated string general_place_verbs = 52;
+  repeated string gerunds = 53;
+  // Phrases used in sentences when defining the word.
+  // This usually seems to be either "are known for" or "are in a story about".
+  string are_known_for = 54;
+  // I don't really understand the difference between the following phrase fields; I suggest just looking at examples.
+  repeated string are_in_relation_to_phrases = 55;
+  repeated string is_in_relation_to_phrases = 56;
+  repeated string is_phrases = 57;
+  repeated string place_like_simple_phrases = 58;
+  repeated string place_dislike_simple_phrases = 59;
+  repeated string place_talk_to_simple_phrases = 60;
+  repeated string place_feel_simple_phrases = 61;
+  repeated string place_meet_simple_phrases = 62;
+  repeated string place_go_towards_simple_phrases = 63;
+  repeated string place_see_simple_phrases = 64;
+  repeated string place_feel_emotional_simple_phrases = 65;
+  repeated string place_touch_simple_phrases = 66;
+  repeated string loves_phrases = 67;
+  repeated string hates_phrases = 68;
+  repeated string wants_phrases = 69;
+  repeated string gets_something_good_phrases = 70;
+  repeated string gets_something_bad_phrases = 71;
+  // Related objects and concepts.
+  repeated string abstract_concepts = 72;
+  repeated string issues = 73;
+  repeated string things = 74;
+  repeated string foods = 75;
+  repeated string body_parts = 76;
+}
