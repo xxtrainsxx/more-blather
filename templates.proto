@@ -137,4 +137,23 @@ message Entry {
   repeated string things = 74;
   repeated string foods = 75;
   repeated string body_parts = 76;
+  repeated string nature_places = 77;
+  repeated string area_types = 78;  // e.g. "territory", "zone"
+  repeated string group_types = 79;
+  repeated string land_types = 80;  // e.g. "terrain", "realm"
+  repeated string society_types = 81;  // e.g. "culture", "community"
+  repeated string periods_of_time = 82;
+  repeated string genres = 83;
+  repeated string media_types = 84;
+  repeated string media_sensation_types = 85;
+  repeated string media_style_adjectives = 86;
+  repeated string people_types = 87;
+  repeated string family_roles = 88;
+  repeated string protagonist_types = 89;
+  repeated string villain_types = 90;
+  repeated string symbolizes_verbs = 91;  // e.g. "expresses", "represents"
+  repeated string normal_weird_spectrum_traits = 92;  // e.g. "eccentric", "ordinary", "interspecies"
+  repeated string alive_dead_spectrum_traits = 93;  // e.g. "deceased", "fictional", "undead"
+  repeated string industry_sectors = 94;
+  repeated string career_statuses = 95;
 }
