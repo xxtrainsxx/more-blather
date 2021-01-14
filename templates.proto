@@ -59,7 +59,7 @@ message Entry {
   Category category = 4;  // REQUIRED
   Subcategory subcategory = 5;
   bool us_specific = 6;
-  // Traits; fill in as many or as few as you would like.
+  // Traits; fill in as many or as few as you would like. Most words have ~10-20 traits.
   // 
   // Attributes.
   // Each "complex" attribute is like the previous one but more exciting or something.
